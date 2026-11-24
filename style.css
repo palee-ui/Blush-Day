@@ -1,0 +1,280 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    margin: 0;
+    background-color: #fff5f8;
+    color: #57434c;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+}
+
+/* HEADER */
+header {
+    padding: 25px 0;
+    border-bottom: 1px solid #f1dce4;
+}
+
+header h2 {
+    color: #bd6d89;
+    margin-bottom: 5px;
+}
+
+header p {
+    color: #a68c97;
+    font-size: 13px;
+}
+
+/* WELCOME */
+.welcome {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 0;
+    gap: 20px;
+}
+
+.small-title {
+    color: #ce819b;
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+
+.welcome h1 {
+    font-family: Georgia, serif;
+    font-size: 48px;
+    margin: 10px 0;
+}
+
+.welcome h1 span {
+    color: #c87591;
+}
+
+.description {
+    color: #a68c97;
+    font-size: 13px;
+}
+
+.date-card {
+    background: #f8e3eb;
+    padding: 25px;
+    border-radius: 18px;
+    width: 230px;
+}
+
+.date-card p {
+    color: #bd6d89;
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+
+.date-card h3 {
+    font-family: Georgia, serif;
+}
+
+.date-card span {
+    color: #a68c97;
+    font-size: 11px;
+}
+
+/* STATISTICS */
+.statistics {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.stat-box {
+    background: white;
+    padding: 18px;
+    border-radius: 15px;
+    border: 1px solid #f1dce4;
+}
+
+.stat-box h4 {
+    color: #a68c97;
+    font-size: 12px;
+}
+
+.stat-box h2 {
+    color: #bd6d89;
+    margin-bottom: 0;
+}
+
+/* MAIN CONTENT */
+.main-content {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 20px;
+}
+
+.add-card,
+.list-card {
+    background: white;
+    padding: 25px;
+    border-radius: 18px;
+    border: 1px solid #f1dce4;
+}
+
+.add-card h2,
+.list-card h2 {
+    font-family: Georgia, serif;
+}
+
+.add-card p,
+.list-card p {
+    color: #a68c97;
+    font-size: 12px;
+}
+
+/* FORM */
+label {
+    display: block;
+    font-size: 12px;
+    margin-top: 15px;
+    margin-bottom: 7px;
+    font-weight: bold;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #efdce3;
+    border-radius: 9px;
+    background: #fff9fb;
+    color: #57434c;
+    outline: none;
+}
+
+input:focus,
+select:focus {
+    border-color: #ce819b;
+}
+
+button {
+    width: 100%;
+    padding: 13px;
+    margin-top: 20px;
+    background: #c87591;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #ad5e7b;
+}
+
+/* TASK LIST */
+#searchInput {
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+#filterInput {
+    margin-bottom: 15px;
+}
+
+.task-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #fff8fa;
+    border: 1px solid #f1dce4;
+    border-radius: 10px;
+    padding: 12px;
+    margin-bottom: 10px;
+}
+
+.task-item input {
+    width: 17px;
+    accent-color: #bd6d89;
+}
+
+.task-info {
+    flex: 1;
+}
+
+.task-info h4 {
+    font-size: 13px;
+    margin: 0 0 5px;
+    overflow-wrap: anywhere;
+}
+
+.task-info p {
+    margin: 0;
+    font-size: 10px;
+}
+
+.completed h4 {
+    text-decoration: line-through;
+    color: #b9aab0;
+}
+
+.delete-button {
+    width: auto;
+    margin: 0;
+    padding: 5px 10px;
+    background: #f5dce5;
+    color: #a95775;
+}
+
+.delete-button:hover {
+    background: #edc5d3;
+}
+
+#emptyState {
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 30px 0;
+    color: #b18f9e;
+    font-size: 11px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 700px) {
+    .welcome {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .date-card {
+        width: 100%;
+    }
+
+    .main-content {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 450px) {
+    .statistics {
+        gap: 7px;
+    }
+
+    .stat-box {
+        padding: 10px;
+    }
+
+    .stat-box h4 {
+        font-size: 10px;
+    }
+
+    .welcome h1 {
+        font-size: 40px;
+    }
+}

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blush Day - Personal Planner</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- HEADER -->
+        <header>
+            <h2>🌷 Blush Day</h2>
+            <p>Your little space to organize your day ♡</p>
+        </header>
+
+        <!-- WELCOME -->
+        <section class="welcome">
+            <div>
+                <p class="small-title">YOUR PERSONAL PLANNER</p>
+                <h1>Make Today<br><span>Lovely.</span></h1>
+                <p class="description">
+                    Plan your day, one little step at a time.
+                </p>
+            </div>
+
+            <div class="date-card">
+                <p>TODAY</p>
+                <h3 id="todayDate"></h3>
+                <span>Have a lovely day ♡</span>
+            </div>
+        </section>
+
+        <!-- STATISTICS -->
+        <section class="statistics">
+
+            <div class="stat-box">
+                <h4>♡ All Tasks</h4>
+                <h2 id="totalCount">0</h2>
+            </div>
+
+            <div class="stat-box">
+                <h4>✓ Completed</h4>
+                <h2 id="doneCount">0</h2>
+            </div>
+
+            <div class="stat-box">
+                <h4>✧ Pending</h4>
+                <h2 id="pendingCount">0</h2>
+            </div>
+
+        </section>
+
+        <!-- MAIN CONTENT -->
+        <section class="main-content">
+
+            <!-- ADD TASK -->
+            <div class="add-card">
+
+                <h2>Add a Task ♡</h2>
+                <p>Write down your little plans.</p>
+
+                <form id="taskForm">
+
+                    <label>Task Name</label>
+                    <input
+                        type="text"
+                        id="taskInput"
+                        placeholder="What do you need to do?"
+                        required
+                    >
+
+                    <label>Category</label>
+                    <select id="categoryInput">
+                        <option>Personal</option>
+                        <option>Study</option>
+                        <option>Work</option>
+                        <option>Health</option>
+                        <option>Other</option>
+                    </select>
+
+                    <label>Due Date</label>
+                    <input type="date" id="dateInput">
+
+                    <label>Priority</label>
+                    <select id="priorityInput">
+                        <option>Low</option>
+                        <option selected>Medium</option>
+                        <option>High</option>
+                    </select>
+
+                    <button type="submit">＋ Add My Task</button>
+
+                </form>
+
+            </div>
+
+            <!-- TASK LIST -->
+            <div class="list-card">
+
+                <h2>My Tasks ♡</h2>
+                <p>Let's make today productive!</p>
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search your tasks..."
+                >
+
+                <select id="filterInput">
+                    <option value="All">All Tasks</option>
+                    <option value="Pending">To Do</option>
+                    <option value="Completed">Completed</option>
+                </select>
+
+                <div id="taskList"></div>
+
+                <p id="emptyState">
+                    🌸 No tasks yet. Add something to your list!
+                </p>
+
+            </div>
+
+        </section>
+
+        <footer>
+            Made with love ♡ Take it one day at a time.
+        </footer>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
